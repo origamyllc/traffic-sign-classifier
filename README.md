@@ -89,8 +89,8 @@ The given input images from the training set have the following qualities
 • Poor quality of the images
 • Poor contrast with the background
 
-some of the images are blurry nad noisy causing image distortion this image distortion remains even if the images are converted to grey scale the normalization of the images gelps in reducing the bluriness and noisiness of the image
-normalize in such a way that the min value of dst is alpha and max value of dst is beta. cv::normalize does its magic using only scales and shifts (i.e. adding constants and multiplying by constants).
+some of the images are blurry and noisy causing image distortion this image distortion remains even if the images are converted to grey scale the normalization of the images helps in reducing the bluriness and noisiness of the image
+normalize in such a way that the min value of dst is alpha and max value of dst is beta. :normalize does its magic using only scales and shifts (i.e. adding constants and multiplying by constants).
 
 Here are the results of the prediction:
 the performance on the new images when compared to the accuracy results of the test set seems to be low this may happen because there is not enough data in the originam dataset having the same charecteristics as the new image used the difference in error indicates that some charecteristics like 
