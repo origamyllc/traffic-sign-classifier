@@ -24,66 +24,48 @@ The goals / steps of this project are the following:
 
 You're reading it! and here is a link to my [project code](https://github.com/origamyllc/traffic-sign-classifier/blob/master/classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 I used numpy to do a expoloratory data analysis 
-
-####2. Include an exploratory visualization of the dataset.
-
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
 ![alt text][image1]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. As a first step, I decided to convert the images to grayscale because this reduced the no of color channels to process to 1 then I normalized the image to smoothen the gradient this helps in better classification as images are more uniform 
-
+ As a first step, I decided to convert the images to grayscale because this reduced the no of color channels to process to 1 then I normalized the image to smoothen the gradient this helps in better classification as images are more uniform 
 while studying the data distribution in the histogram I realised that the data was not evenly distributed and this was causing the output result to be skewed towards traffic signs with higher frequency of occurence keeping this in mind I augmented the data for more uniformity for this purpouse I calculatefd the mean distribution and augmented images by rotating them and adding them back to the training set this gave me the below distribution 
-
-
 The difference between the original data set and the augmented data set is the following ... 
 
+![alt text][image1]
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+####  Model Architecture
 
 My final model consisted of the following layers:
-
 | Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
+|:---------------------:|:---------------------------------------------:|   							| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
 | Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
+| Fully connected		|Input = 400. Output = 120    									|
+| Relu				| Input = 400. Output = 120   									|
+|	Dropout					|	Input = 400. Output = 120											|
+| Fully connected		|Input = 120. Output = 84.  									|
+| Relu				| Input = 120. Output = 84.								|
+|	Dropout					|	Input = 120. Output = 84.								|
+| Fully connected		|Input = 84. Output = 43.    									|
+
  
+To train the model, I used an Adam optimizer Adam offers several advantages over the simple tf.train.GradientDescentOptimizer. Foremost is that it uses moving averages of the parameters (momentum);Simply put, this enables Adam to use a larger effective step size, and the algorithm will converge to this step size without fine tuning.
 
+The main down side of the algorithm is that Adam requires more computation to be performed for each parameter in each training step (to maintain the moving averages and variance, and calculate the scaled gradient); and more state to be retained for each parameter (approximately tripling the size of the model to store the average and variance for each parameter)
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+I chose the following hyper parameters 
+EPOCHS = 10
+BATCH_SIZE = 150
+mu = 0
+sigma = 0.1
 
-To train the model, I used an ....
-
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
-
-My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
-
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
 ###Test a Model on New Images
 
