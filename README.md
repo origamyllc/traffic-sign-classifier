@@ -42,11 +42,15 @@ The difference between the original data set and the augmented data set is the f
 
 My final model consisted of the following layers:
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:|   							| 
+
+
+| Layer         	|     Description        					| 
+|:---------------------:|:---------------------------------------------:| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Relu				| Input = 400. Output = 120   	
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
+| Convolution 3x3	    | Input = 28x28x6. Output = 14x14x6.      									|
+| Relu				| Input = 28x28x6. Output = 14x14x6.   	
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
 | Fully connected		|Input = 400. Output = 120    									|
 | Relu				| Input = 400. Output = 120   									|
@@ -56,7 +60,7 @@ My final model consisted of the following layers:
 |	Dropout					|	Input = 120. Output = 84.								|
 | Fully connected		|Input = 84. Output = 43.    									|
 
- 
+
 To train the model, I used an Adam optimizer Adam offers several advantages over the simple tf.train.GradientDescentOptimizer. Foremost is that it uses moving averages of the parameters (momentum);Simply put, this enables Adam to use a larger effective step size, and the algorithm will converge to this step size without fine tuning.
 
 The main down side of the algorithm is that Adam requires more computation to be performed for each parameter in each training step (to maintain the moving averages and variance, and calculate the scaled gradient); and more state to be retained for each parameter (approximately tripling the size of the model to store the average and variance for each parameter)
