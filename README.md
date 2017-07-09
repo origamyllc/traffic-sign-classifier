@@ -17,7 +17,7 @@ You're reading it! and here is a link to my [project code](https://github.com/or
 I used numpy to do a expoloratory data analysis 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-![png](./Screen Shot 2017-07-09 at 5.18.44 AM.png))
+
 
 ### Design and Test a Model Architecture
 
