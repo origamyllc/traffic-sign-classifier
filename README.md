@@ -35,10 +35,10 @@ My final model consisted of the following layers:
 
 | Layer         	|     Description        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution      	| 1x1 stride, same padding, outputs 32x32x64 	|
 | Relu				| Input = 400. Output = 120   	
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | Output = 10x10x16.      									|
+| Convolution 	    | Output = 10x10x16.      									|
 | Relu				| Output = 10x10x16. 	
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
 | Fully connected		|Input = 400. Output = 120    									|
