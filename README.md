@@ -14,6 +14,10 @@ The goals / steps of this project are the following:
 You're reading it! and here is a link to my [project code](https://github.com/origamyllc/traffic-sign-classifier/blob/master/classifier.ipynb)
 
 ### Data Set Summary & Exploration
+
+The Dataset consists of the German traffic signs with different brightness,distortion etc and can be visualised here 
+
+![Alt text](https://github.com/origamyllc/traffic-sign-classifier/blob/master/Screen%20Shot%202017-07-09%20at%201.34.37%20PM.png)
 I used numpy to do a expoloratory data analysis 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
@@ -78,19 +82,24 @@ Validation Accuracy = 0.990
 Test Accuracy: 0.9356294274330139
 
 ### Test a Model on New Images
+The given input images from the training set have the following qualities 
 
+• Blurriness
+• Noisiness
+• Poor quality of the images
+• Poor contrast with the background
+
+some of the images are blurry and noisy causing image distortion this image distortion remains even if the images are converted to grey scale the normalization of the images helps in reducing the bluriness and noisiness of the image
+normalize in such a way that the min value of dst is alpha and max value of dst is beta. :normalize does its magic using only scales and shifts (i.e. adding constants and multiplying by constants).
 
 Here are the results of the prediction:
+the performance on the new images when compared to the accuracy results of the test set seems to be low this may happen because there is not enough data in the originam dataset having the same charecteristics as the new image used the difference in error indicates that some charecteristics like 
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+• Blurriness
+• Noisiness
+• Poor quality of the images
+• Poor contrast with the background
 
-
-
+need to have enough variation in them so that every possible guess is correcly made . so more data with more variation might do the trick 
 
 ![Alt text](https://github.com/origamyllc/traffic-sign-classifier/blob/master/Screen%20Shot%202017-07-09%20at%205.35.15%20AM.png)
