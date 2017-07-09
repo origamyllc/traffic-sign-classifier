@@ -82,7 +82,15 @@ Validation Accuracy = 0.990
 Test Accuracy: 0.9356294274330139
 
 ### Test a Model on New Images
+The given input images from the training set have the following qualities 
 
+• Blurriness
+• Noisiness
+• Poor quality of the images
+• Poor contrast with the background
+
+some of the images are blurry nad noisy causing image distortion this image distortion remains even if the images are converted to grey scale the normalization of the images gelps in reducing the bluriness and noisiness of the image
+normalize in such a way that the min value of dst is alpha and max value of dst is beta. cv::normalize does its magic using only scales and shifts (i.e. adding constants and multiplying by constants).
 
 Here are the results of the prediction:
 
