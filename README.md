@@ -41,6 +41,7 @@ The difference between the original data set and the augmented data set is the f
 ####  Model Architecture
 
 My final model consisted of the following layers:
+
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:|   							| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
