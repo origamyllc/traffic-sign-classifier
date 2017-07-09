@@ -17,7 +17,7 @@ You're reading it! and here is a link to my [project code](https://github.com/or
 I used numpy to do a expoloratory data analysis 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-
+![Alt text](https://github.com/origamyllc/traffic-sign-classifier/blob/master/Screen%20Shot%202017-07-09%20at%205.18.44%20AM.png)
 
 ### Design and Test a Model Architecture
 
@@ -25,7 +25,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 while studying the data distribution in the histogram I realised that the data was not evenly distributed and this was causing the output result to be skewed towards traffic signs with higher frequency of occurence keeping this in mind I augmented the data for more uniformity for this purpouse I calculatefd the mean distribution and augmented images by rotating them and adding them back to the training set this gave me the below distribution 
 The difference between the original data set and the augmented data set is the following ... 
 
-
+![Alt text](https://github.com/origamyllc/traffic-sign-classifier/blob/master/Screen%20Shot%202017-07-09%20at%205.18.56%20AM.png)
 
 ####  Model Architecture
 
