@@ -93,16 +93,13 @@ some of the images are blurry nad noisy causing image distortion this image dist
 normalize in such a way that the min value of dst is alpha and max value of dst is beta. cv::normalize does its magic using only scales and shifts (i.e. adding constants and multiplying by constants).
 
 Here are the results of the prediction:
+the performance on the new images when compared to the accuracy results of the test set seems to be low this may happen because there is not enough data in the originam dataset having the same charecteristics as the new image used the difference in error indicates that some charecteristics like 
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+• Blurriness
+• Noisiness
+• Poor quality of the images
+• Poor contrast with the background
 
-
-
+need to have enough variation in them so that every possible guess is correcly made . so more data with more variation might do the trick 
 
 ![Alt text](https://github.com/origamyllc/traffic-sign-classifier/blob/master/Screen%20Shot%202017-07-09%20at%205.35.15%20AM.png)
