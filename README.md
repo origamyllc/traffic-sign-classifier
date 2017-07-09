@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/origamyllc/traffic-sign-classifier/blob/master/classifier.ipynb)
 
 ###Data Set Summary & Exploration
 I used numpy to do a expoloratory data analysis 
