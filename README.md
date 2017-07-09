@@ -66,9 +66,13 @@ To train the model, I used an Adam optimizer Adam offers several advantages over
 The main down side of the algorithm is that Adam requires more computation to be performed for each parameter in each training step (to maintain the moving averages and variance, and calculate the scaled gradient); and more state to be retained for each parameter (approximately tripling the size of the model to store the average and variance for each parameter)
 
 I chose the following hyper parameters 
+
 EPOCHS = 10
+
 BATCH_SIZE = 150
+
 mu = 0
+
 sigma = 0.1
 
 
