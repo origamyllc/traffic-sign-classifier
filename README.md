@@ -14,6 +14,10 @@ The goals / steps of this project are the following:
 You're reading it! and here is a link to my [project code](https://github.com/origamyllc/traffic-sign-classifier/blob/master/classifier.ipynb)
 
 ### Data Set Summary & Exploration
+
+The Dataset consists of the German traffic signs with different brightness,distortion etc and can be visualised here 
+
+![Alt text](https://github.com/origamyllc/traffic-sign-classifier/blob/master/Screen%20Shot%202017-07-09%20at%201.34.37%20PM.png)
 I used numpy to do a expoloratory data analysis 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
