@@ -84,9 +84,7 @@ EPOCHS = 27
 BATCH_SIZE = 156
 rate = 0.00097
 
-###Test a Model on New Images
-
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+### Test a Model on New Images
 
 
 Here are the results of the prediction:
